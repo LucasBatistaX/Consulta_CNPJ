@@ -8,6 +8,7 @@ class AppTextStyles {
   static const TextStyle titleFirstWord = TextStyle(color: Colors.white, fontSize:AppSizes.s36, fontWeight: FontWeight.w900);
   static const TextStyle titleSecondWord = TextStyle(color: AppColors.greenPrimary, fontSize: AppSizes.s36, fontWeight: FontWeight.w900);
   static const TextStyle subTitle = TextStyle(color: Colors.grey, fontSize: AppSizes.s14);
+  static const TextStyle footerText = TextStyle(color: Colors.grey, fontSize: AppSizes.s12);
 
 
 

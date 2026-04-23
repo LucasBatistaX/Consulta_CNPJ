@@ -1,7 +1,6 @@
-import 'package:consulta_cnpj/src/utils/app_assets.dart';
 import 'package:consulta_cnpj/src/utils/app_colors.dart';
-import 'package:consulta_cnpj/src/utils/app_sizes.dart';
-import 'package:consulta_cnpj/src/utils/app_text_styles.dart';
+import 'package:consulta_cnpj/src/widgets/footer.dart';
+import 'package:consulta_cnpj/src/widgets/forms.dart';
 import 'package:consulta_cnpj/src/widgets/header.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +20,8 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Header(),
+            Forms(),
+            Footer(),
           ],
         ),
       ),
