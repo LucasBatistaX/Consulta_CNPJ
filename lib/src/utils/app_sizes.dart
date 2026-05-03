@@ -36,6 +36,8 @@ class AppSizes {
   static const double w736= 736.0; //max weight of input.
 
   //Ints
+  static const int si18 = 18;
+  static const int si30 = 30;
   static const int si80 = 80;
   static const int si100 = 100;
 
