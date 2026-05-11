@@ -36,4 +36,18 @@ class AppTextStyles {
     fontSize: AppSizes.s16,
   );
 
+  static const TextStyle titleCards = TextStyle(
+    color: Colors.white,
+    fontSize: AppSizes.s16,
+    fontWeight: FontWeight.bold,
+  );
+
+  static const TextStyle subtitleCards = TextStyle(
+    fontSize: AppSizes.s12,
+    color: Colors.grey,
+  );
+
+  static const TextStyle reponseDataCard = TextStyle(
+    color: Colors.white,
+  );
 }

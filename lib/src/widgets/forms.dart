@@ -43,6 +43,7 @@ class _FormsState extends State<Forms> with ValidationCnpjMixin {
 
   @override
   void dispose() {
+    cnpjValidation.dispose();
     super.dispose();
   }
 
@@ -125,7 +126,7 @@ class _FormsState extends State<Forms> with ValidationCnpjMixin {
           //Erros e alertas do App.
           ListenableBuilder(listenable: cnpjValidation, builder: (context, child) {
             return cnpjValidation.isValid();
-          },)
+          },),
         ],
       ),
     );
