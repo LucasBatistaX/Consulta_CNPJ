@@ -23,7 +23,11 @@ class AppSizes {
   static const double s56 = 56.0;
   static const double s60 = 60.0;
   static const double s64 = 64.0;
+  static const double s86 = 86.0;
   static const double s100 = 100.0;
+  static const double s150 = 150.0;
+  static const double s180 = 180.0;
+  static const double s200 = 200.0;
 
 
   //Heights
@@ -36,8 +40,12 @@ class AppSizes {
   static const double w736= 736.0; //max weight of input.
 
   //Ints
+  static const int si18 = 18;
+  static const int si30 = 30;
+  static const int si60 = 60;
   static const int si80 = 80;
   static const int si100 = 100;
+  static const int si600 = 600;
 
   //Lengths Cep
   static const int si9 = 9;

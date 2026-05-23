@@ -15,6 +15,7 @@ class Footer extends StatelessWidget {
         top: AppSizes.s40,
         right: AppSizes.s20,
         left: AppSizes.s20,
+        bottom: AppSizes.s64
       ),
       child: Column(
         children: [
