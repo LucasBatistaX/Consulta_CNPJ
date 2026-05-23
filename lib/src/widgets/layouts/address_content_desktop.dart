@@ -4,7 +4,15 @@ import 'package:consulta_cnpj/src/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class AddressContentDesktop extends StatelessWidget {
-  const AddressContentDesktop({super.key});
+  const AddressContentDesktop({super.key, required this.estado, required this.cidade, required this.cep, required this.bairro, required this.logradouro, required this.numero, required this.complemento});
+
+  final String estado;
+  final String cidade;
+  final String cep;
+  final String bairro;
+  final String logradouro;
+  final String numero;
+  final String complemento;  
 
   @override
   Widget build(BuildContext context) {
@@ -41,13 +49,13 @@ class AddressContentDesktop extends StatelessWidget {
                     SizedBox(height: AppSizes.s16),
                     Text("ESTADO", style: AppTextStyles.subtitleCards),
                     SizedBox(height: AppSizes.s2),
-                    SelectableText("SP", style: AppTextStyles.reponseDataCard),
+                    SelectableText(estado, style: AppTextStyles.reponseDataCard),
                     Divider(color: AppColors.fillColor),
                     SizedBox(height: AppSizes.s2),
                     Text("CIDADE", style: AppTextStyles.subtitleCards),
                     SizedBox(height: AppSizes.s2),
                     SelectableText(
-                      "MAUÁ",
+                      cidade,
                       style: AppTextStyles.reponseDataCard,
                     ),
                     Divider(color: AppColors.fillColor),
@@ -55,7 +63,7 @@ class AddressContentDesktop extends StatelessWidget {
                     Text("CEP", style: AppTextStyles.subtitleCards),
                     SizedBox(height: AppSizes.s2),
                     SelectableText(
-                      "09321-375",
+                      cep,
                       style: AppTextStyles.reponseDataCard,
                     ),
                     Divider(color: AppColors.fillColor),
@@ -63,7 +71,7 @@ class AddressContentDesktop extends StatelessWidget {
                     Text("BAIRRO", style: AppTextStyles.subtitleCards),
                     SizedBox(height: AppSizes.s2),
                     SelectableText(
-                      "VILA GUARANI",
+                      bairro,
                       style: AppTextStyles.reponseDataCard,
                     ),
                     SizedBox(height: AppSizes.s2),
@@ -76,23 +84,23 @@ class AddressContentDesktop extends StatelessWidget {
                   crossAxisAlignment: .start,
                   children: [
                     SizedBox(height: AppSizes.s2),
-                    Text("LOUGRADOURO", style: AppTextStyles.subtitleCards),
+                    Text("LOGRADOURO", style: AppTextStyles.subtitleCards),
                     SizedBox(height: AppSizes.s2),
                     SelectableText(
-                      "RUA CARLOS DE LAET",
+                      logradouro,
                       style: AppTextStyles.reponseDataCard,
                     ),
                     Divider(color: AppColors.fillColor),
                     SizedBox(height: AppSizes.s2),
                     Text("NUMERO", style: AppTextStyles.subtitleCards),
                     SizedBox(height: AppSizes.s2),
-                    SelectableText("72", style: AppTextStyles.reponseDataCard),
+                    SelectableText(numero, style: AppTextStyles.reponseDataCard),
                     Divider(color: AppColors.fillColor),
                     SizedBox(height: AppSizes.s2),
                     Text("COMPLEMENTO", style: AppTextStyles.subtitleCards),
                     SizedBox(height: AppSizes.s2),
                     SelectableText(
-                      "APARTAMENTO 21",
+                      complemento,
                       style: AppTextStyles.reponseDataCard,
                     ),
                     SizedBox(height: AppSizes.s2),

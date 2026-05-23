@@ -1,4 +1,5 @@
-import 'package:consulta_cnpj/src/models/cnpj_model.dart';
+import 'package:consulta_cnpj/src/cubit/cnpj_cubit.dart';
+import 'package:consulta_cnpj/src/data/models/cnpj_validation_model.dart';
 import 'package:consulta_cnpj/src/utils/app_colors.dart';
 import 'package:consulta_cnpj/src/utils/app_sizes.dart';
 import 'package:consulta_cnpj/src/utils/app_text_styles.dart';
@@ -6,6 +7,7 @@ import 'package:consulta_cnpj/src/validations/validation_mask.dart';
 import 'package:consulta_cnpj/src/validations/validation_cnpj_mixin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Forms extends StatefulWidget {
   const Forms({super.key});
@@ -19,14 +21,16 @@ class _FormsState extends State<Forms> with ValidationCnpjMixin {
   late final GlobalKey<FormState> formKey;
   late final TextEditingController cnpjController;
   late final CnpjModel cnpjValidation;
+  late final CnpjCubit cubit;
   ValidationMask? mask;
 
 
   void buscarCnpj(String value) {
+    //validação
     String cnpjClean = value.replaceAll(RegExp(r'[^0-9]'), '');
     var result = validatorForm(cnpjValidation.getCnpj());
     if(result == null){
-    debugPrint("CNPJ validado com sucesso! CNPJ: $cnpjClean" );
+    cubit.getCnpjRequest(cnpjClean);
     }
   }
 
@@ -39,6 +43,7 @@ class _FormsState extends State<Forms> with ValidationCnpjMixin {
     cnpjController = TextEditingController();
     cnpjValidation = CnpjModel();
     mask = ValidationMask(cnpjController: cnpjController);
+    cubit = BlocProvider.of<CnpjCubit>(context);
   }
 
   @override
@@ -60,6 +65,10 @@ class _FormsState extends State<Forms> with ValidationCnpjMixin {
               right: AppSizes.s20,
             ),
             child: TextFormField(
+              onFieldSubmitted:(value) {
+                cnpjValidation.setCnpj(cnpjController.text);
+                buscarCnpj(cnpjValidation.getCnpj());
+              },
               onChanged: (value) {
                 mask?.maskValidation(cnpjController.text);
               },
