@@ -4,7 +4,10 @@ import 'package:consulta_cnpj/src/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class ContactContentDesktop extends StatelessWidget {
-  const ContactContentDesktop({super.key});
+  const ContactContentDesktop({super.key, required this.telefone, required this.email});
+
+  final String telefone;
+  final String email;
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +62,7 @@ class ContactContentDesktop extends StatelessWidget {
                         Text("TELEFONE", style: AppTextStyles.subtitleCards),
                         SizedBox(height: AppSizes.s2),
                         SelectableText(
-                          "(011) 99999-9999",
+                          telefone.isEmpty ? "Não informado" : telefone,
                           style: AppTextStyles.reponseDataCard,
                         ),
                       ],
@@ -73,7 +76,7 @@ class ContactContentDesktop extends StatelessWidget {
                         Text("E-MAIL", style: AppTextStyles.subtitleCards),
                         SizedBox(height: AppSizes.s2),
                         SelectableText(
-                          "Fulanododetal@gmail.com",
+                          email.isNotEmpty ? email : "Não informado",
                           style: AppTextStyles.reponseDataCard,
                         ),
                         SizedBox(height: AppSizes.s2),
