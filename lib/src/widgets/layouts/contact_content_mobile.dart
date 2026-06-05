@@ -4,7 +4,10 @@ import 'package:consulta_cnpj/src/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 
 class ContactContentMobile extends StatelessWidget {
-  const ContactContentMobile({super.key});
+  const ContactContentMobile({super.key, required this.telefone, required this.email});
+
+  final String telefone;
+  final String email;
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +59,7 @@ class ContactContentMobile extends StatelessWidget {
                   Text("TELEFONE", style: AppTextStyles.subtitleCards),
                   SizedBox(height: AppSizes.s2),
                   SelectableText(
-                    "(011) 99999-9999",
+                    telefone.isEmpty ? "Não informado" : telefone,
                     style: AppTextStyles.reponseDataCard,
                   ),
                   SizedBox(height: AppSizes.s2),
@@ -70,7 +73,7 @@ class ContactContentMobile extends StatelessWidget {
                   Text("E-MAIL", style: AppTextStyles.subtitleCards),
                   SizedBox(height: AppSizes.s2),
                   SelectableText(
-                    "Fulanododetal@gmail.com",
+                    email.isEmpty ? "Não informado" : email,
                     style: AppTextStyles.reponseDataCard,
                   ),
                   SizedBox(height: AppSizes.s2),

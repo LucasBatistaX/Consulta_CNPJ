@@ -9,7 +9,7 @@ class ErrorValidation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: AppSizes.s30),
+      padding: const EdgeInsets.only(top: AppSizes.s30,left: AppSizes.s20, right: AppSizes.s20, ),
       child: Container(
         decoration: BoxDecoration(
           color: Colors.red.shade300.withAlpha(AppSizes.si30),
@@ -24,7 +24,7 @@ class ErrorValidation extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: AppSizes.s12),
               child: Center(child: Icon(Icons.error_outline, color: Colors.red,)),
             ),
-            Text(message, style: TextStyle(color: Colors.white))
+            Expanded(child: Text(message, style: TextStyle(color: Colors.white)))
           ],
         ),
       ),

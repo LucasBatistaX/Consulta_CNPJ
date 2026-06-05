@@ -25,7 +25,6 @@ class CnpjModel extends ChangeNotifier with ValidationCnpjMixin {
     if (result != null) {
       return ErrorValidation(message: result);
     }
-
     return SizedBox.shrink();
   }
 }
