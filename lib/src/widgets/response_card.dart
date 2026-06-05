@@ -159,6 +159,7 @@ class _ResponseCardState extends State<ResponseCard> {
                         ),
                         SizedBox(height: AppSizes.s18),
                         ListView.builder(
+                          physics: NeverScrollableScrollPhysics(),
                           shrinkWrap: true,
                           itemCount: model.inscricaoEstadual.isEmpty ? 1 : model.inscricaoEstadual.length,
                           itemBuilder: (context, index) {

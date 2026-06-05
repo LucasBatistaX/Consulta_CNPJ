@@ -97,6 +97,7 @@ class _FormsState extends State<Forms> with ValidationCnpjMixin {
                   color: Colors.white.withAlpha(AppSizes.si80),
                 ),
               ),
+              cursorColor: AppColors.greenPrimary,
               textAlign: TextAlign.center,
               style: AppTextStyles.labelIputStyle,
               keyboardType: TextInputType.number,
@@ -111,9 +112,9 @@ class _FormsState extends State<Forms> with ValidationCnpjMixin {
                 buscarCnpj(cnpjValidation.getCnpj());
               },
               style: TextButton.styleFrom(
-                maximumSize: Size(AppSizes.w736, AppSizes.s56),
+                maximumSize: Size(AppSizes.w736, AppSizes.s68),
                 backgroundColor: AppColors.greenPrimary,
-                padding: EdgeInsets.all(AppSizes.s24),
+                padding: EdgeInsets.symmetric(vertical: AppSizes.s24),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadiusGeometry.circular(AppSizes.s10),
                 ),

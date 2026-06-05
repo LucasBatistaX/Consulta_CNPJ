@@ -28,7 +28,7 @@ class AppTextStyles {
   static const TextStyle buttonText = TextStyle(
     color: AppColors.backgroundColor,
     fontSize: AppSizes.s16,
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.w700,
   );
 
   static const TextStyle labelIputStyle = TextStyle(

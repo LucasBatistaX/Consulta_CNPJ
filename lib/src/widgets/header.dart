@@ -27,20 +27,19 @@ class Header extends StatelessWidget {
       Row(
         crossAxisAlignment: .center,
         mainAxisAlignment: .center,
+        spacing: AppSizes.s8,
         children: [
           RichText(
             text: TextSpan(
               text: "Consulta",style: AppTextStyles.titleFirstWord
             )
           ),
-          SizedBox(width: AppSizes.s8),
           RichText(text: TextSpan(
             text: "CNPJ",
             style: AppTextStyles.titleSecondWord
           )),
         ],
       ),
-      SizedBox(height: AppSizes.s8),
       Text("Informações públicas da Receita Federal.", style: AppTextStyles.subTitle)
       ],
     );
